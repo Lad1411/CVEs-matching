@@ -1,0 +1,17 @@
+[
+    {
+        "VMware ESXi": "UNSAFE"
+    },
+    {
+        "VMware vCenter": "UNSAFE"
+    },
+    {
+        "OpenSSL": "UNSAFE"
+    },
+    {
+        "Cisco IOS XE": "UNSAFE"
+    },
+    {
+        "Envoy": "SAFE"
+    }
+]

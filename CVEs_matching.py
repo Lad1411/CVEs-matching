@@ -1,0 +1,42 @@
+import google.generativeai as genai
+import os
+from dotenv import load_dotenv
+from utils import read_content, save_result_to_file
+from data_normalize import get_normalize_data
+load_dotenv()
+
+API_KEY =  os.getenv('API_KEY')
+
+input_cve = get_normalize_data(r'Positive/Case2/cve_list.txt')
+input_asset = read_content(r'Positive/Case2/asset.txt')
+
+genai.configure(api_key=API_KEY)
+
+generation_config = {
+    "temperature": 0.2,
+}
+tool = [save_result_to_file]
+model = genai.GenerativeModel(
+    "gemini-2.5-flash",
+    generation_config=generation_config,
+    tools = tool
+)
+
+chat = model.start_chat(enable_automatic_function_calling=True)
+
+prompt = f'''
+INPUT CVE: {input_cve}
+INPUT ASSET: {input_asset}
+
+For each item in my input asset, match it with my input cve
+If it is not in my cve list it is SAFE
+If it is in my cve list:
+1. Use Google search to find the release date of my current version
+2. If release date in vulnerable_range: it is UNSAFE
+3. If release date >= safe_min_version date: it is SAFE
+4. Result is a list of dictinonaries:'dependency name': 'SAFE or UNSAFE'
+5. Use save_result_to file to save result to 'result.json'
+'''''
+
+response = chat.send_message(prompt)
+print(response.text)
