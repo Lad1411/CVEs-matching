@@ -1,0 +1,9 @@
+CVE-2024-5910 (điểm CVSS: 9.3): Một lỗ hổng thiếu xác thực (Missing Authentication) trong Palo Alto Networks Expedition cho phép kẻ tấn công có quyền truy cập mạng vào máy chủ Expedition chiếm quyền kiểm soát tài khoản quản trị viên (admin) để cấu hình lại hệ thống hoặc đánh cắp dữ liệu.
+
+CVE-2024-9464 (điểm CVSS: 9.9): Một lỗ hổng chèn lệnh (Command Injection) cho phép kẻ tấn công đã xác thực có thể thực thi các lệnh hệ điều hành tùy ý với quyền root trên máy chủ bị ảnh hưởng, dẫn đến việc kiểm soát hoàn toàn hệ thống. Các vấn đề đã được giải quyết trong các phiên bản sau đây, người dùng được khuyến nghị cập nhật ngay lập tức:
+
+Expedition 1.2.92 và các phiên bản mới hơn
+
+Expedition 1.2 (các bản build cũ hơn 1.2.92 đều bị ảnh hưởng)
+
+Các phiên bản Migration Tool cũ (EoL) không còn được hỗ trợ

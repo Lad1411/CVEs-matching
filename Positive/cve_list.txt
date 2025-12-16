@@ -1,0 +1,31 @@
+CVE-2021-44228 (Log4Shell)
+
+Description: A critical Remote Code Execution (RCE) vulnerability in Apache Log4j's JNDI lookup feature.
+
+Affected Versions (Unsafe): 2.0-beta9 through 2.14.1
+
+Fixed Version: 2.15.0
+
+CVE-2023-22515 (Privilege Escalation)
+
+Description: A broken access control vulnerability in Atlassian Confluence Data Center & Server allowing attacker to create unauthorized admin accounts.
+
+Affected Versions (Unsafe): 8.0.0 through 8.5.1
+
+Fixed Version: 8.5.2
+
+CVE-2023-3519 (Citrix Unauthenticated RCE)
+
+Description: A vulnerability allowing code execution on Citrix ADC appliances configured as a Gateway (VPN) without requiring a password.
+
+Affected Versions (Unsafe): NetScaler ADC and NetScaler Gateway 13.0 before 13.0-91.13
+
+Fixed Version: 13.0-91.13
+
+CVE-2023-27997 (FortiOS Heap Overflow)
+
+Description: A heap-based buffer overflow in FortiOS SSL-VPN that allows arbitrary code execution.
+
+Affected Versions (Unsafe): FortiOS 7.0.0 through 7.0.11
+
+Fixed Version: 7.0.12

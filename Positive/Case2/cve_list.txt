@@ -1,0 +1,31 @@
+CVE-2021-21974 (Heap Overflow)
+
+Description: A heap overflow vulnerability in OpenSLP as used in VMware ESXi.
+
+Affected Versions (Unsafe): ESXi 6.7 prior to 6.7U3
+
+Fixed Version: 6.7U3
+
+CVE-2021-21972 (Remote Code Execution)
+
+Description: A remote code execution vulnerability in vCenter Server via port 443.
+
+Affected Versions (Unsafe): vCenter Server 6.5 prior to 6.5U3n
+
+Fixed Version: 6.5U3n
+
+CVE-2019-1559 (Padding Oracle)
+
+Description: A vulnerability in OpenSSL where the library does not correctly handle 0-byte records during SSL/TLS handshakes.
+
+Affected Versions (Unsafe): 1.0.2 through 1.0.2r
+
+Fixed Version: 1.0.2s
+
+CVE-2018-0171 (Smart Install RCE)
+
+Description: A vulnerability in the Smart Install feature of Cisco IOS Software allowing remote code execution.
+
+Affected Versions (Unsafe): 16.6.x prior to 16.6.3
+
+Fixed Version: 16.6.3

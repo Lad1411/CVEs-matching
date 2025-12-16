@@ -1,0 +1,9 @@
+Hypervisor (VMware ESXi): v6.7U2c
+
+Management (VMware vCenter): v6.5U3f
+
+Cryptography Lib (OpenSSL): v1.0.2k
+
+Network OS (Cisco IOS XE): v16.6.1
+
+Database Proxy (Envoy): v1.14.0-dev
