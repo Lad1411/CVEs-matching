@@ -123,5 +123,83 @@ vmware_esxi: 6.7.0
 
 <img width="545" height="699" alt="image" src="https://github.com/user-attachments/assets/619ecd51-dae5-4dcf-9922-72799ec6406c" />
 
+## Installation
 
+1.  **Clone the repository:**
+    ```bash
+    git clone https://github.com/Lad1411/CVEs-matching.git
+    cd CVEs-matching
+    ```
+
+2.  **Create a virtual environment (Recommended):**
+    ```bash
+    python -m venv venv
+    
+    # Windows
+    venv\Scripts\activate
+    
+    # Mac/Linux
+    source venv/bin/activate
+    ```
+
+3.  **Install dependencies:**
+    ```bash
+    pip install -r requirements.txt
+    ```
+
+## Usage
+
+1.  **Prepare your data:**
+    You need two input files to run the scanner.
+
+**A. Asset List (`assets.txt`)**
+Create a text file listing your software assets and their versions.
+*Format:* `library_name: version`
+
+*Example `assets.txt`:*
+```text
+react: v16.6.1
+lodash: v4.17.15
+axios: v0.21.0
+django: v3.1.2
+```
+
+**B. CVE List (`cve_list.txt`)**
+Create a text file listing all CVEs (descriptions and affected verisons/fixed version)
+
+*Example `cve_list.txt`:*
+```text
+CVE-2021-44228 (Log4Shell)
+Description: A critical Remote Code Execution (RCE) vulnerability in Apache Log4j's JNDI lookup feature.
+Affected Versions (Unsafe): 2.0-beta9 through 2.14.1
+
+CVE-2023-22515 (Privilege Escalation)
+Description: A broken access control vulnerability in Atlassian Confluence Data Center & Server allowing attacker to create unauthorized admin accounts.
+Affected Versions (Unsafe): 8.0.0 through 8.5.1
+Fixed Version: 8.5.2
+
+CVE-2023-3519 (Citrix Unauthenticated RCE)
+Description: A vulnerability allowing code execution on Citrix ADC appliances configured as a Gateway (VPN) without requiring a password.
+Affected Versions (Unsafe): NetScaler ADC and NetScaler Gateway 13.0 before 13.0-91.13
+Fixed Version: 13.0-91.13
+
+CVE-2023-27997 (FortiOS Heap Overflow)
+Description: A heap-based buffer overflow in FortiOS SSL-VPN that allows arbitrary code execution.
+Affected Versions (Unsafe): FortiOS 7.0.0 through 7.0.11
+Fixed Version: 7.0.12
+```
+
+
+2.  **Run the scanner:**
+    ```bash
+    python CVEs_matching.py -c <path_to_cve_list> -a <path_to_asset_list> -s <path_to_save_result>
+    ```
+
+Eg:
+   ```bash
+    python CVEs_matching.py -c data/cve_list.txt -a data/assets.txt -s results/output.json
+   ```
+   
+## Output
+The results will be saved to the specified path (e.g., results/output.json or similar) containing the detailed safety analysis.
 
