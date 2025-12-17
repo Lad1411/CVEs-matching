@@ -63,3 +63,17 @@ Description: A heap-based buffer overflow in FortiOS SSL-VPN that allows arbitra
 Affected Versions (Unsafe): FortiOS 7.0.0 through 7.0.11
 Fixed Version: 7.0.12
 ```
+
+## Result 
+### 1. Negativ: (True) 
+<img width="655" height="485" alt="image" src="https://github.com/user-attachments/assets/a924dcfd-f15f-4cb0-b67c-20b267fd1cc2" />
+
+
+### 2. Positive: 
+- Case 1: (True) 
+<img width="507" height="418" alt="image" src="https://github.com/user-attachments/assets/82d943e2-0b30-4078-ae62-4af73e748f14" />
+
+- Case 2: (True)
+<img width="580" height="410" alt="image" src="https://github.com/user-attachments/assets/d1eb583d-5512-4ae7-af48-74485674579d" />
+
+
