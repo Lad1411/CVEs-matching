@@ -147,6 +147,24 @@ vmware_esxi: 6.7.0
     pip install -r requirements.txt
     ```
 
+## 🔑 Configuration (API Keys)
+
+This tool requires access to the **Google Custom Search API** [or whatever service you use] to fetch release dates dynamically.
+
+1.  **Get your API Key:**
+    * Go to the [Google AI STUDIO](https://aistudio.google.com/api-keys/).
+    * Create a project and enable the **Custom Search API**.
+    * Generate an **API Key**.
+
+2.  **Set up the environment:**
+    Create a file named `.env` in the root folder of the project.
+
+3.  **Add your keys:**
+    Open the `.env` file and paste your keys like this:
+    ```ini
+    API_KEY=your_api_key_here
+    ```
+
 ## Usage
 
 1.  **Prepare your data:**
