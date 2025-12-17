@@ -74,12 +74,11 @@ Fixed Version: 7.0.12
 - Case 1: (True)
   Asset
   ```
-   WebServer (Nginx): v1.18.0
-   Cache (Redis): v7.0.5
-   Message bus (Apache Kafka): v3.6.1
-   PostgreSQL: v16
-   Zabbix App: v6.0
-   K8S (Kubernetes): v1.27.8
+  Virtualization (VMware vCenter Server): v7.0.0
+  Logging Library (Apache Log4j): v2.14.1
+  VPN Gateway (Fortinet FortiOS): v7.0.5
+  Web Application (Atlassian Confluence): v8.0.0
+  Load Balancer (Citrix ADC): v13.0-58.30
   ```
 <img width="507" height="418" alt="image" src="https://github.com/user-attachments/assets/82d943e2-0b30-4078-ae62-4af73e748f14" />
 
