@@ -1,6 +1,0 @@
-WebServer (Nginx): v1.18.0
-Cache (Redis): v7.0.5
-Message bus (Apache Kafka): v3.6.1
-PostgreSQL: v16
-Zabbix App: v6.0
-K8S (Kubernetes): v1.27.8
