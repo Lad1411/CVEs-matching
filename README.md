@@ -1,4 +1,4 @@
-<img width="545" height="699" alt="image" src="https://github.com/user-attachments/assets/93b8f718-754c-4dc6-b897-06468204c98f" /># CVEs Matching
+# CVEs Matching
 
 A security utility designed to cross-reference a project's **Asset List** (dependencies) against a **CVE List** sourced from a Local Vulnerability Database.
 
@@ -71,10 +71,27 @@ Fixed Version: 7.0.12
 
 
 ### 2. Positive: 
-- Case 1: (True) 
+- Case 1: (True)
+  Asset
+  ```
+   WebServer (Nginx): v1.18.0
+   Cache (Redis): v7.0.5
+   Message bus (Apache Kafka): v3.6.1
+   PostgreSQL: v16
+   Zabbix App: v6.0
+   K8S (Kubernetes): v1.27.8
+  ```
 <img width="507" height="418" alt="image" src="https://github.com/user-attachments/assets/82d943e2-0b30-4078-ae62-4af73e748f14" />
 
 - Case 2: (True)
+  Asset
+  ```
+   Hypervisor (VMware ESXi): v6.7U2c
+   Management (VMware vCenter): v6.5U3f
+   Cryptography Lib (OpenSSL): v1.0.2k
+   Network OS (Cisco IOS XE): v16.6.1
+   Database Proxy (Envoy): v1.14.0-dev
+  ```
 <img width="580" height="410" alt="image" src="https://github.com/user-attachments/assets/d1eb583d-5512-4ae7-af48-74485674579d" />
 
 - Case 3: (True)
