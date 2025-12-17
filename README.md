@@ -31,7 +31,7 @@ To ensure accurate version checking, input files should follow the schemas below
 
 ### 1. Asset List (`assets.txt`)
 The list of current dependencies.
-
+Eg:
 ```
 Virtualization (VMware vCenter Server): v7.0.0
 Logging Library (Apache Log4j): v2.14.1
@@ -42,6 +42,7 @@ Load Balancer (Citrix ADC): v13.0-58.30
 
 ### 2. CVEs List (`cve_list.txt`)
 The list of CVEs extracted from a Local Vulnerability Database
+Eg:
 ```
 CVE-2021-44228 (Log4Shell)
 Description: A critical Remote Code Execution (RCE) vulnerability in Apache Log4j's JNDI lookup feature.
@@ -66,8 +67,16 @@ Fixed Version: 7.0.12
 
 ## Result 
 ### 1. Negative: (True) 
-<img width="655" height="485" alt="image" src="https://github.com/user-attachments/assets/a924dcfd-f15f-4cb0-b67c-20b267fd1cc2" />
-
+   <img width="655" height="485" alt="image" src="https://github.com/user-attachments/assets/a924dcfd-f15f-4cb0-b67c-20b267fd1cc2" />
+   Asset
+  ```
+   WebServer (Nginx): v1.18.0
+   Cache (Redis): v7.0.5
+   Message bus (Apache Kafka): v3.6.1
+   PostgreSQL: v16
+   Zabbix App: v6.0
+   K8S (Kubernetes): v1.27.8
+  ```
 
 
 ### 2. Positive: 
