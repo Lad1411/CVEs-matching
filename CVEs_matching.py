@@ -3,15 +3,25 @@ import os
 from dotenv import load_dotenv
 from utils import read_content, save_result_to_file
 from data_normalize import get_normalize_data
+import argparse
 load_dotenv()
 
 API_KEY =  os.getenv('API_KEY')
 
-input_cve = get_normalize_data(r'Positive/Case3/cve_list.txt')
-input_asset = read_content(r'Positive/Case3/asset.txt')
+def get_args():
+    parser = argparse.ArgumentParser(description= "CVEs matching")
+    parser.add_argument("--input_cve", "-c", type= str, help= "Path of cve list", required=True)
+    parser.add_argument("--input_asset", "-a", type= str, help= "Path of asset list", required=True)
+    parser.add_argument("--save_file", "-s", type=str, help="Save result to this path", required=True)
+    args = parser.parse_args()
+    return args
+
+args = get_args()
+
+input_cve = get_normalize_data(args.input_cve)
+input_asset = read_content(args.input_asset)
 
 genai.configure(api_key=API_KEY)
-
 generation_config = {
     "temperature": 0.2,
 }
@@ -41,7 +51,7 @@ If it is in my cve list:
 2. If release date in vulnerable_range: it is UNSAFE
 3. If release date >= safe_min_version date: it is SAFE
 4. Result is a list of dictinonaries:'dependency name': 'SAFE or UNSAFE'
-5. Finally, call the function `save_result_to_file` with the content argument containing ONLY the valid JSON string of the results to save content to 'result.json'.
+5. Finally, call the function `save_result_to_file` with the content argument containing ONLY the valid JSON string of the results to save content to {args.save_file}.
 '''
 
 response = chat.send_message(prompt)
