@@ -31,6 +31,7 @@ To ensure accurate version checking, input files should follow the schemas below
 
 ### 1. Asset List (`assets.txt`)
 The list of current dependencies.
+
 Eg:
 ```
 Virtualization (VMware vCenter Server): v7.0.0
@@ -41,7 +42,8 @@ Load Balancer (Citrix ADC): v13.0-58.30
 ```
 
 ### 2. CVEs List (`cve_list.txt`)
-The list of CVEs extracted from a Local Vulnerability Database
+The list of CVEs extracted from a Local Vulnerability Database.
+
 Eg:
 ```
 CVE-2021-44228 (Log4Shell)
@@ -67,55 +69,59 @@ Fixed Version: 7.0.12
 
 ## Result 
 ### 1. Negative: (True) 
-   <img width="655" height="485" alt="image" src="https://github.com/user-attachments/assets/a924dcfd-f15f-4cb0-b67c-20b267fd1cc2" />
-   Asset
-  ```
-   WebServer (Nginx): v1.18.0
-   Cache (Redis): v7.0.5
-   Message bus (Apache Kafka): v3.6.1
-   PostgreSQL: v16
-   Zabbix App: v6.0
-   K8S (Kubernetes): v1.27.8
-  ```
+Input Assets:
+```
+WebServer (Nginx): v1.18.0
+Cache (Redis): v7.0.5
+Message bus (Apache Kafka): v3.6.1
+PostgreSQL: v16
+Zabbix App: v6.0
+K8S (Kubernetes): v1.27.8
+```
+<img width="655" height="485" alt="image" src="https://github.com/user-attachments/assets/a924dcfd-f15f-4cb0-b67c-20b267fd1cc2" />
 
 
 ### 2. Positive: 
 - Case 1: (True)
-  Asset
-  ```
-  Virtualization (VMware vCenter Server): v7.0.0
-  Logging Library (Apache Log4j): v2.14.1
-  VPN Gateway (Fortinet FortiOS): v7.0.5
-  Web Application (Atlassian Confluence): v8.0.0
-  Load Balancer (Citrix ADC): v13.0-58.30
-  ```
+                          
+Input Assets:
+```
+Virtualization (VMware vCenter Server): v7.0.0
+Logging Library (Apache Log4j): v2.14.1
+VPN Gateway (Fortinet FortiOS): v7.0.5
+Web Application (Atlassian Confluence): v8.0.0
+Load Balancer (Citrix ADC): v13.0-58.30
+```
 <img width="507" height="418" alt="image" src="https://github.com/user-attachments/assets/82d943e2-0b30-4078-ae62-4af73e748f14" />
 
 - Case 2: (True)
-  Asset
-  ```
-   Hypervisor (VMware ESXi): v6.7U2c
-   Management (VMware vCenter): v6.5U3f
-   Cryptography Lib (OpenSSL): v1.0.2k
-   Network OS (Cisco IOS XE): v16.6.1
-   Database Proxy (Envoy): v1.14.0-dev
-  ```
+
+Input Assets:
+```
+Hypervisor (VMware ESXi): v6.7U2c
+Management (VMware vCenter): v6.5U3f
+Cryptography Lib (OpenSSL): v1.0.2k
+Network OS (Cisco IOS XE): v16.6.1
+Database Proxy (Envoy): v1.14.0-dev
+```
 <img width="580" height="410" alt="image" src="https://github.com/user-attachments/assets/d1eb583d-5512-4ae7-af48-74485674579d" />
 
 - Case 3: (True)
-  Asset
-  ```
-   react: v16.6.1
-   lodash: v4.17.15
-   axios: v0.21.0
-   openssl: v1.0.2k
-   django: v3.1.2
-   spring-framework: v5.2.8
-   fastapi: v0.63.0
-   log4j: v2.14.1
-   vmware_esxi: 6.7.0
-  ```
-  <img width="545" height="699" alt="image" src="https://github.com/user-attachments/assets/619ecd51-dae5-4dcf-9922-72799ec6406c" />
+
+Input Assets:
+```
+react: v16.6.1
+lodash: v4.17.15
+axios: v0.21.0
+openssl: v1.0.2k
+django: v3.1.2
+spring-framework: v5.2.8
+fastapi: v0.63.0
+log4j: v2.14.1
+vmware_esxi: 6.7.0
+```
+
+<img width="545" height="699" alt="image" src="https://github.com/user-attachments/assets/619ecd51-dae5-4dcf-9922-72799ec6406c" />
 
 
 
