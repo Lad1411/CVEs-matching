@@ -7,8 +7,8 @@ load_dotenv()
 
 API_KEY =  os.getenv('API_KEY')
 
-input_cve = get_normalize_data(r'Positive/Case2/cve_list.txt')
-input_asset = read_content(r'Positive/Case2/asset.txt')
+input_cve = get_normalize_data(r'Positive/Case3/cve_list.txt')
+input_asset = read_content(r'Positive/Case3/asset.txt')
 
 genai.configure(api_key=API_KEY)
 
@@ -25,8 +25,14 @@ model = genai.GenerativeModel(
 chat = model.start_chat(enable_automatic_function_calling=True)
 
 prompt = f'''
-INPUT CVE: {input_cve}
-INPUT ASSET: {input_asset}
+INPUT CVE: 
+<cve_list>
+{input_cve}
+</cve_list>
+INPUT ASSET: 
+<assets>
+{input_asset}
+</assets>
 
 For each item in my input asset, match it with my input cve
 If it is not in my cve list it is SAFE
@@ -35,8 +41,8 @@ If it is in my cve list:
 2. If release date in vulnerable_range: it is UNSAFE
 3. If release date >= safe_min_version date: it is SAFE
 4. Result is a list of dictinonaries:'dependency name': 'SAFE or UNSAFE'
-5. Use save_result_to file to save result to 'result.json'
-'''''
+5. Finally, call the function `save_result_to_file` with the content argument containing ONLY the valid JSON string of the results to save content to 'result.json'.
+'''
 
 response = chat.send_message(prompt)
 print(response.text)
